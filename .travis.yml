@@ -1,5 +1,5 @@
 language: cpp
-dist: trusty
+dist: xenial
 sudo: required
-install: pwd && sudo add-apt-repository ppa:boost-latest/ppa -y && sudo add-apt-repository ppa:chris-lea/libsodium -y && sudo apt-get update && sudo apt-get install libsodium-dev && sudo apt-get update && sudo apt-get install -y build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libminiupnpc-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libgtest-dev
+install: pwd && sudo apt-get install libsodium-dev && sudo apt-get update && sudo apt-get install -y build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libminiupnpc-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libgtest-dev && sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/ && cd /home/travis/build/onyxdevteam/silicon
 script: make -j2
