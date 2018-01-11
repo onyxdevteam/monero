@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Monero Project
+# Copyright (c) 2014-2017, The Silicon Project
 #
 # All rights reserved.
 #
@@ -48,7 +48,7 @@ set(blockchain_import_private_headers
   bootstrap_serialization.h
   )
 
-monero_private_headers(blockchain_import
+silicon_private_headers(blockchain_import
 	  ${blockchain_import_private_headers})
 
 set(blockchain_export_sources
@@ -63,11 +63,11 @@ set(blockchain_export_private_headers
   bootstrap_serialization.h
   )
 
-monero_private_headers(blockchain_export
+silicon_private_headers(blockchain_export
 	  ${blockchain_export_private_headers})
 
 
-monero_add_executable(blockchain_import
+silicon_add_executable(blockchain_import
   ${blockchain_import_sources}
   ${blockchain_import_private_headers}
   ${blocksdat})
@@ -92,10 +92,10 @@ endif()
 
 set_property(TARGET blockchain_import
 	PROPERTY
-	OUTPUT_NAME "monero-blockchain-import")
+	OUTPUT_NAME "silicon-blockchain-import")
 install(TARGETS blockchain_import DESTINATION bin)
 
-monero_add_executable(blockchain_export
+silicon_add_executable(blockchain_export
   ${blockchain_export_sources}
   ${blockchain_export_private_headers})
 
@@ -114,6 +114,6 @@ target_link_libraries(blockchain_export
 
 set_property(TARGET blockchain_export
 	PROPERTY
-	OUTPUT_NAME "monero-blockchain-export")
+	OUTPUT_NAME "silicon-blockchain-export")
 install(TARGETS blockchain_export DESTINATION bin)
 

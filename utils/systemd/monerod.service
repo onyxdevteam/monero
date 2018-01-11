@@ -1,18 +1,18 @@
 [Unit]
-Description=Monero Full Node
+Description=Silicon Full Node
 After=network.target
 
 [Service]
-User=monero
-Group=monero
+User=silicon
+Group=silicon
 WorkingDirectory=~
-RuntimeDirectory=monero
+RuntimeDirectory=silicon
 
 Type=forking
-PIDFile=/run/monero/monerod.pid
+PIDFile=/run/silicon/silicond.pid
 
-ExecStart=/usr/bin/monerod --config-file /etc/monerod.conf \
-    --detach --pidfile /run/monero/monerod.pid
+ExecStart=/usr/bin/silicond --config-file /etc/silicond.conf \
+    --detach --pidfile /run/silicon/silicond.pid
 
 Restart=always
 PrivateTmp=true

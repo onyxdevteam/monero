@@ -1,4 +1,4 @@
-// Copyright (c) 2017, The Monero Project
+// Copyright (c) 2017, The Silicon Project
 //
 // All rights reserved.
 //
@@ -104,12 +104,12 @@ int main(int argc, char* argv[])
   SL(tools::wallet2::unsigned_tx_set);
   SL(tools::wallet2::signed_tx_set);
 
-  SL(Monero::WalletImpl);
-  SL(Monero::AddressBookRow);
-  SL(Monero::TransactionInfoImpl);
-  SL(Monero::TransactionHistoryImpl);
-  SL(Monero::PendingTransactionImpl);
-  SL(Monero::UnsignedTransactionImpl);
+  SL(Silicon::WalletImpl);
+  SL(Silicon::AddressBookRow);
+  SL(Silicon::TransactionInfoImpl);
+  SL(Silicon::TransactionHistoryImpl);
+  SL(Silicon::PendingTransactionImpl);
+  SL(Silicon::UnsignedTransactionImpl);
 
   return 0;
 }

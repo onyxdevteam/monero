@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2017, The Monero Project
+// Copyright (c) 2014-2017, The Silicon Project
 //
 // All rights reserved.
 //
@@ -1346,7 +1346,7 @@ namespace cryptonote
      * @brief loads block hashes from compiled-in data set
      *
      * A (possibly empty) set of block hashes can be compiled into the
-     * monero daemon binary.  This function loads those hashes into
+     * silicon daemon binary.  This function loads those hashes into
      * a useful state.
      */
     void load_compiled_in_block_hashes();

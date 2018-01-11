@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, The Monero Project
+# Copyright (c) 2014-2017, The Silicon Project
 #
 # All rights reserved.
 #
@@ -71,9 +71,9 @@ set(common_private_headers
   threadpool.h
   updates.h)
 
-monero_private_headers(common
+silicon_private_headers(common
   ${common_private_headers})
-monero_add_library(common
+silicon_add_library(common
   ${common_sources}
   ${common_headers}
   ${common_private_headers})
@@ -96,5 +96,5 @@ if(HAVE_C11)
 SET_PROPERTY(SOURCE memwipe.c PROPERTY COMPILE_FLAGS -std=c11)
 endif()
 
-#monero_install_headers(common
+#silicon_install_headers(common
 #  ${common_headers})
